@@ -1,7 +1,7 @@
 VoteApp::Application.routes.draw do
   
   resources :votes
-
+  match 'results' => 'votes#results'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

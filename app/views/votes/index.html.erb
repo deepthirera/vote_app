@@ -1,3 +1,15 @@
-<% @candidates.each do |candidate|%>
-  <%=candidate.name %>
+<%= form_for @vote, :url => { :action => "create" } do |f|%>
+  <div>
+    <%= f.collection_select(:id, @candidates, :id, :name) %>
+  </div>
+  <div>
+    <%= f.collection_select(:voter_id, @candidates, :id, :name) %>
+  </div>
+<div>
+  <%= f.label :comment %>
+</div>
+<div>
+  <%= f.text_area :comment, :rows => 5 %>
+</div>
+  <%= f.submit "Vote" %>
 <% end %>
