@@ -1,0 +1,26 @@
+" Press ? for help
+
+.. (up a dir)
+/Users/deepthir/vote_app/
+▸ app/
+▸ config/
+▾ db/
+  ▾ migrate/
+      20120613140245_user_profile.rb
+      20120613172747_create_candidates.rb
+    development.sqlite3
+    schema.rb
+    seeds.rb
+▸ doc/
+▸ lib/
+▸ log/
+▸ public/
+▸ script/
+▸ test/
+▸ tmp/
+▸ vendor/
+  config.ru
+  Gemfile
+  Gemfile.lock
+  Rakefile
+  README.rdoc
