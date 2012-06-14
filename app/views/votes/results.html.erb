@@ -1,6 +1,8 @@
-<h3> Winner </h3>
+<h3>Winner</h3>
 <div>
-  <%= @results.first %>
+  <% @winners.each do |winner|%>
+    <%= winner.first %>
+  <%end%>  
 </div>
 <br>
 <h3> Votes Obtained </h3>

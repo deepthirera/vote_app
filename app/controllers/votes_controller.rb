@@ -7,13 +7,13 @@ class VotesController < ApplicationController
     Vote.create(:voter_id => params[:vote][:id], :comment => params[:vote][:comment], :candidate_id => params[:vote][:voter_id])
   end
   def results
-    h = {}
+    @votings = {}
     Candidate.all.each do |candidate|
-      h["#{candidate.name}"] = candidate.votes.count
+      @votings["#{candidate.name}"] = candidate.votes.count
     end
-    @votings = h
     @cheaters = Vote.cheaters
-    @results = [] and return if h.values.max==0 
-    @results =  h.max_by{|k,v| v}
+    @results =  @votings.max_by{|k,v| v}
+    @winners = @votings.each_pair.select{|k,v| v==@results[1]}
+    UserMailer.registration_confirmation(@user).deliver if @winners
   end
 end
