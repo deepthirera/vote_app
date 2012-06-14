@@ -1,7 +1,9 @@
 <%= form_for @vote, :url => { :action => "create" } do |f|%>
+  <h4> Your name </h4>
   <div>
     <%= f.collection_select(:id, @candidates, :id, :name) %>
   </div>
+  <h4> Your favourite </h4>
   <div>
     <%= f.collection_select(:voter_id, @candidates, :id, :name) %>
   </div>

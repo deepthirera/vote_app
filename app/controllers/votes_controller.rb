@@ -12,7 +12,8 @@ class VotesController < ApplicationController
       h["#{candidate.name}"] = candidate.votes.count
     end
     @votings = h
-    @results =  h.max_by{|k,v| v}
     @cheaters = Vote.cheaters
+    @results = [] and return if h.values.max==0 
+    @results =  h.max_by{|k,v| v}
   end
 end
