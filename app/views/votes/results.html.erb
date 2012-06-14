@@ -1,1 +1,10 @@
-<%= @results.first %>
+<h3> Winner </h3>
+<div>
+  <%= @results.first %>
+</div>
+<h4> People who have not voted </h4>
+<div>
+  <% @cheaters.each do |cheater|%>
+    <%= cheater %>
+  <%end%>
+</div>
