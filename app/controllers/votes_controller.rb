@@ -11,6 +11,7 @@ class VotesController < ApplicationController
     Candidate.all.each do |candidate|
       h["#{candidate.name}"] = candidate.votes.count
     end
+    @votings = h
     @results =  h.max_by{|k,v| v}
     @cheaters = Vote.cheaters
   end
