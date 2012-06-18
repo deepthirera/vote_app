@@ -2,6 +2,8 @@ VoteApp::Application.routes.draw do
   
   resources :votes
   match 'results' => 'votes#results'
+  match 'mail_send' => 'votes#mail_send'
+  match 'pending_mail_send' => 'votes#pending_mail_send'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

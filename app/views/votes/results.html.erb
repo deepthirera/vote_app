@@ -1,19 +1,13 @@
-<h3>Winner</h3>
+<h3>Winner for now</h3>
 <div>
-  <% @winners.each do |winner|%>
+  <%@winners.try(:each) do |winner|%>
     <%= winner.first %>
-  <%end%>  
+  <%end%> 
 </div>
 <br>
-<h3> Votes Obtained </h3>
-<div>
-  <% @votings.each_pair do |candidate, count| %>
-    <%= "#{candidate} => #{count}" %><br>
-  <%end%>
-</div>
 <h4> People who have not voted </h4>
 <div>
-  <% @cheaters.each do |cheater|%>
+  <% @cheaters.try(:each) do |cheater|%>
     <%= cheater %><br>
   <%end%>
 </div>

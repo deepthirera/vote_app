@@ -8,6 +8,7 @@
   ▾ migrate/
       20120613140245_user_profile.rb
       20120613172747_create_candidates.rb
+      20120613174626_create_votes.rb
     development.sqlite3
     schema.rb
     seeds.rb
@@ -22,5 +23,6 @@
   config.ru
   Gemfile
   Gemfile.lock
+  NERD_tree_1
   Rakefile
   README.rdoc

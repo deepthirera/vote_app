@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-['Ashokkumar Ramdoss',	'Gowri R Jayalakshmi', 'Karthik Sirasanagandla', 'Senthil V S', 'Karthikeyan M', 'Abhinaya Sukumar', 'Kalaiarasi Srinivasaramanan', 'Ram Kumar M K', 'Bijesh Vijayan', 'Praveena Fernandes',	'Saravanan P S', 'Livingston Samuel',	'Boojapathy Chidambaram', 'Mubashar Nadeem Sibgathullah', 'Deepthi R'].sort.each do |name|
-  Candidate.create(name: name )
-end
-
+h = {"Abhinaya Sukumar" => "sabhinay@thoughtworks.com","Archana Beny" => "archanab@thoughtworks.com", "Ashokkumar Ramdoss" => "ashokk@thoughtworks.com", "Bijesh Vijayan" => "vijayan@thoughtworks.com", "Booja pathy" => "boojapc@thoughtworks.com",  "Deepthi R" => "deepthir@thoughtworks.com", "Gowri J" => "gowrirj@thoughtworks.com", "Kalai Arasi" => "kalaias@thoughtworks.com", "Karthik Sirasanagandla" => "karthiks@thoughtworks.com", "Karthikeyan M" => "karthikm@thoughtworks.com", 
+      "Livingston Samuel" => "lsamuel@thoughtworks.com", "Mubashar Nadeem Sibgathullah" => "mubashns@thoughtworks.com", "Praveena Fernandes" => "praveeg@thoughtworks.com", "Ram Kumar M K" => "ramkumarmk@thoughtworks.com",
+      "Saravanan P" => "saravanp@thoughtworks.com", "Satish Kumar Viswanathan" => "sviswan1@thoughtworks.com", "Senthil VS" => "senthilv@thoughtworks.com"}
+h.each_pair{|k,v| Candidate.create(:name => k, :mail_id => v)}
