@@ -1,31 +1,4 @@
 <h2>Voice Ur Opinion</h2>
-<head>
-  <style type="text/css">
-#div1, #div2
-{float:left; width:100px; height:35px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
-#div3
-{float:left; width:100px; height:35px; }
-</style>
-<script type="text/javascript">
-function allowDrop(ev)
-{
-ev.preventDefault();
-}
-
-function drag(ev)
-{
-ev.dataTransfer.setData("Text",ev.target.id);
-}
-
-function drop(ev)
-{
-ev.preventDefault();
-var data=ev.dataTransfer.getData("Text");
-ev.target.appendChild(document.getElementById(data));
-}
-</script>
-</head>
-<body>
 <%= form_for @vote, :url => { :action => "create" } do |f|%>
   <h4> Your name </h4>
   <div>
@@ -42,12 +15,4 @@ ev.target.appendChild(document.getElementById(data));
   <%= f.text_area :comment, :rows => 5 %>
 </div>
 <%= f.submit "Vote" %>
-
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <img src="deepthi_tree.jpg" draggable="true" ondragstart="drag(event)" id="1" width="88" height="31" />
-</div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
 <% end %>
-</body>

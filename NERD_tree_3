@@ -1,0 +1,24 @@
+" Press ? for help
+
+.. (up a dir)
+/Users/deepthir/vote_app/
+▸ app/
+▸ config/
+▸ db/
+▸ doc/
+▾ lib/
+  ▸ assets/
+  ▾ tasks/
+      data.rake
+▸ log/
+▸ public/
+▸ script/
+▸ test/
+▸ tmp/
+▸ vendor/
+  config.ru
+  Gemfile
+  Gemfile.lock
+  NERD_tree_1
+  Rakefile
+  README.rdoc
